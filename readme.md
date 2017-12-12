@@ -2,6 +2,13 @@
 
 This is from [an online tutorial](https://elitedatascience.com/keras-tutorial-deep-learning-in-python).
 
+## To Run the Program
+
+In the project directory:
+```bash
+./run keras-tut.py
+```
+
 ## Exception
 ```
 keras-tut.py:49: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(32, (3, 3), input_shape=(1, 28, 28..., activation="relu")`

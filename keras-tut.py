@@ -47,7 +47,7 @@ Y_test = np_utils.to_categorical(y_test, 10)
 
 # 7. Define model architecture
 model = Sequential()
-# This is as far as I got. At 49 I have an uncaught exception.
+# This is as far as I got. At next line I have an uncaught exception.
 model.add(Convolution2D(32, 3, 3, activation='relu', input_shape=(1,28,28)))
 model.add(Convolution2D(32, 3, 3, activation='relu'))
 model.add(MaxPooling2D(pool_size=(2,2)))

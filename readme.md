@@ -11,7 +11,7 @@ In the project directory:
 
 ## Exception
 ```
-keras-tut.py:49: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(32, (3, 3), input_shape=(1, 28, 28..., activation="relu")`
+keras-tut.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(32, (3, 3), input_shape=(1, 28, 28..., activation="relu")`
   model.add(Convolution2D(32, 3, 3, activation='relu', input_shape=(1,28,28)))
 Traceback (most recent call last):
   File "/Users/sa35907/projects/deepmind/keras-tutorial/env/lib/python3.5/site-packages/tensorflow/python/framework/common_shapes.py", line 686, in _call_cpp_shape_fn_impl
@@ -23,7 +23,7 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: Negative dimension
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "keras-tut.py", line 49, in <module>
+  File "keras-tut.py", line 51, in <module>
     model.add(Convolution2D(32, 3, 3, activation='relu', input_shape=(1,28,28)))
   File "/Users/sa35907/projects/deepmind/keras-tutorial/env/lib/python3.5/site-packages/keras/models.py", line 464, in add
     layer(x)

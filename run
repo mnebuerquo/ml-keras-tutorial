@@ -1,0 +1,30 @@
+#!/bin/sh
+
+echo "Activate virtualenv..."
+if [ ! -d "./env" ]; then
+	echo "Creating env..."
+	virtualenv --system-site-packages -p python3 "env"
+fi
+# then activate virtualenv
+. "./env/bin/activate"
+echo "Env activated."
+
+echo "Installing dependencies..."
+./env/bin/pip3 install -r ./requirements.txt
+echo "Making sure dependencies are frozen correctly..."
+./env/bin/pip3 freeze > ./requirements.txt
+echo "Dependencies done."
+
+#Load variables from environment if the file exists.
+#Otherwise you can set vars before running this script using "export VAR=value"
+if [ -f "./envfile.env" ]; then
+	echo "Loading environment vars from envfile.env..."
+	set -a
+	. ./envfile.env
+	set +a
+fi
+
+PROGRAM=$1
+echo "Running $PROGRAM..."
+shift 1
+./env/bin/python3 $PROGRAM "$@"
